@@ -1,10 +1,13 @@
 import CardList from './components/CardList';
-
+import HeroIntro from './components/HeroIntro';
 function App() {
   return (
-    <div className="container"> {/* Fixed typo */}
-      <CardList />
-    </div>
+    <>
+    <HeroIntro />
+      <div className="container">
+        <CardList />
+      </div>
+    </>
   );
 }
 

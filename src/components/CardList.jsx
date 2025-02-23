@@ -3,7 +3,7 @@ import CarCard from "./CarCard";
 
 export default function CardList() {
     const cardInfo = [
-        {   
+        {
             carPic: "/resources/thumbs/dzire.png",
             carName: "Maruti Dzire",
             type: "Sedan",
@@ -13,7 +13,7 @@ export default function CardList() {
             boot: "268L",
             drivetrain: "FWD"
         },
-        {   
+        {
             carPic: "/resources/thumbs/creta.png",
             carName: "Hyundai Creta",
             type: "SUV",
@@ -23,7 +23,7 @@ export default function CardList() {
             boot: "433L",
             drivetrain: "FWD / AWD"
         },
-        {   
+        {
             carPic: "/resources/thumbs/nexonev.png",
             carName: "Tata Nexon EV",
             type: "SUV",
@@ -33,7 +33,7 @@ export default function CardList() {
             boot: "350L",
             drivetrain: "FWD"
         },
-        {   
+        {
             carPic: "/resources/thumbs/xuv700.png",
             carName: "Mahindra XUV700",
             type: "SUV",
@@ -43,7 +43,7 @@ export default function CardList() {
             boot: "450L",
             drivetrain: "FWD / AWD"
         },
-        {   
+        {
             carPic: "/resources/thumbs/tharroxx.png",
             carName: "Mahindra Thar Roxx",
             type: "SUV (5-Door)",
@@ -53,7 +53,7 @@ export default function CardList() {
             boot: "300L",
             drivetrain: "4WD"
         },
-        {   
+        {
             carPic: "/resources/thumbs/be6e.png",
             carName: "Mahindra BE 6e",
             type: "SUV",
@@ -66,20 +66,22 @@ export default function CardList() {
     ];
 
     return (
-        <div className="container pt-4 py-2">
+        <div className="container shadow rounded pt-4 py-2">
             <div className="row">
                 {cardInfo.map((car, index) => (
                     <div key={index} className="col-lg-4 col-md-6 col-sm-12">
-                        <CarCard
-                            carPic={car.carPic}
-                            carName={car.carName}
-                            type={car.type}
-                            fuel={car.fuel}
-                            mileage={car.mileage}
-                            passenger={car.passenger}
-                            boot={car.boot}
-                            drivetrain={car.drivetrain}
-                        />
+                        <div className="shadow rounded p-1 m-1">
+                            <CarCard
+                                carPic={car.carPic}
+                                carName={car.carName}
+                                type={car.type}
+                                fuel={car.fuel}
+                                mileage={car.mileage}
+                                passenger={car.passenger}
+                                boot={car.boot}
+                                drivetrain={car.drivetrain}
+                            />
+                        </div>
                     </div>
                 ))}
             </div>
